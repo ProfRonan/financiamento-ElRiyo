@@ -14,7 +14,6 @@ class Test(unittest.TestCase):
         valor = str(random.randint(1, 1000))
         taxa = str(random.randint(0, 200))
         tempo = str(random.randint(1,240))
-        print('Testando com valor, taxa, tempo =>', valor, taxa, tempo)
         input_returns = [valor, taxa, tempo]
         with patch('builtins.input',
                    side_effect=input_returns) as mock_input, patch(
